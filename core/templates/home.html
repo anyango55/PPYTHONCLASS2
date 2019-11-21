@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Karibu</title>
+</head>
+<body>
+    <h1>Welcome To Our Homepage</h1>
+
+    {% if user.is_authentcated %}
+        Welcome {{ user.username }}
+        <a href="/accounts/logout/">Logout</a>
+    {% else %}
+    <h2>
+       <!--  Welcome Guest -->
+        Please <a href="/accounts/register">Register</a>
+        or <a href="/accounts/login">Login</a>
+    
+    {% endif %}
+    </h2>
+    <style type="text/css">
+body{
+  background-color: orange;  
+}
+h1{
+   color: white;
+  text-align: center;
+}
+h2{
+   color: white;
+  text-align: center;
+}
+a{
+  /*  display: block;*/
+    width: 115px;
+    height: 25px;
+    background: #4E9CAF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+</style>
+
+</body>
+</html>
