@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+</head>
+
+<body>
+
+
+    {% if user.is_authenticated %}
+    <h2>Welcome {{user.username}}!</h2>
+    <p>Add a student</p>
+    <button><a href="/student/add/"> Add student </a></button>
+
+    <p>or</p>
+
+    <p>Log out</p>
+    <button><a href="/accounts/logout/"> Log out </a></button>
+
+    {% else %}
+    <h2>Hello guest</h2>
+    <p>You can log in</p>
+    <button><a href="/accounts/login/"> Log in </a></button>
+    <p>or</p>
+
+    <p>Create an account</p>
+    <button><a href="/accounts/register/"> Create account </a></button>
+
+    {% endif %}
+
+</body>
+
+</html>
+© 2019 GitHub, Inc.
